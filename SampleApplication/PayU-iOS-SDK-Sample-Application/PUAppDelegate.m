@@ -43,9 +43,13 @@
      Code that fetch access token from your backend
      
      */
+
+    NSString *token = @"";
+    NSLog(@"%s is called. Providing token=%@", __FUNCTION__, token);
+    completionHandler(@"", nil); /* Invoke when token is retrieved */
     
-    completionHandler(/* access token */, nil); /* Invoke when token is retrieved */
-    completionHandler(nil, /* error */); /* Invoke when there was an error */
+//    NSError *error = [[NSError alloc] initWithDomain:@"" code:0 userInfo:nil];
+//    completionHandler(nil, error); /* Invoke when there was an error */
 }
 
 @end
